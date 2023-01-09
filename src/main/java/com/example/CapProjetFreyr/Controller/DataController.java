@@ -3,6 +3,7 @@ package com.example.CapProjetFreyr.Controller;
 import com.example.CapProjetFreyr.Storage.Database;
 import com.example.CapProjetFreyr.Entity.Data;
 import com.example.CapProjetFreyr.Storage.DatabaseConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -13,6 +14,7 @@ import java.util.List;
 public class DataController {
 
     private DatabaseConfig databaseConfig;
+    @Autowired
     public DataController(DatabaseConfig databaseMock) {
         this.databaseConfig=databaseMock;
     }
