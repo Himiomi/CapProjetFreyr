@@ -21,6 +21,7 @@ public class DataController {
 
     @GetMapping("/ping")
     public String ping(){
+        System.out.println("ping");
         return "pong";
     }
 

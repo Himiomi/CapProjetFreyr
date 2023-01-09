@@ -1,6 +1,5 @@
 package com.example.CapProjetFreyr.Entity;
 
-import io.micrometer.core.annotation.Timed;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
