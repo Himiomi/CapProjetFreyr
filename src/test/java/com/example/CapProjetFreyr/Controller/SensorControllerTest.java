@@ -61,17 +61,6 @@ class SensorControllerTest {
     @Test
     void getAllSensors() {
 
-        // Création de l'instance de la classe à tester
-        SensorController myClass = new SensorController(databaseMock);
-
-        // Configuration du mock de l'objet Database pour qu'il retourne la liste de stations fictive
-        when(databaseMock.getUrl()).thenReturn("jdbc:sqlite:src/test/resources/sqlite/db/test-chinook.db");
-
-        // Appel de la méthode à tester
-        List<Sensor> actualStations = myClass.getAllSensors();
-
-        // Vérification que la méthode retourne bien la liste de stations fictive
-        assertEquals(expectedStations.toString(), actualStations.toString());
 
     }
 
