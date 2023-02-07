@@ -51,7 +51,7 @@ public class Database {
             ResultSet result = statement.executeQuery("Select * from Sensor");
 
             while (result.next()){
-
+                System.out.println(new Date(result.getTimestamp("addedDate").getTime()));
                 Gson gson = new Gson();
                 Sensor test = new Sensor(
                         result.getInt("id"),
@@ -98,7 +98,7 @@ public class Database {
             Connection conn = DriverManager.getConnection(url);
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery("Select * from SensorValue");
-            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
             while (result.next()){
                 String val = result.getObject("captureDate").toString();

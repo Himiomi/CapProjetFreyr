@@ -15,14 +15,14 @@ public class SensorController {
         this.databaseMock=databaseMock;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4201")
     @GetMapping("/sensor")
     public List<Sensor> getAllSensors(){
 
         return Database.getSensors(this.databaseMock.getUrl());
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4201")
     @PostMapping("/person/newsensor")
     public String addSensor(@RequestBody Sensor sensor){
         //Just has a Sysout stmt, a real world application would save this record to the database

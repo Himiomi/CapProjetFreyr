@@ -19,14 +19,14 @@ public class DataController {
         this.databaseConfig=databaseMock;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4201")
 
     @GetMapping("/ping")
     public String ping(){
         System.out.println("ping");
         return "pong";
     }
-
+    @CrossOrigin(origins = "http://localhost:4201")
     @GetMapping("/data")
     public List<Data> getAllData() throws ParseException {
         List<Data> mylist = Database.getData(databaseConfig.getUrl());
@@ -35,7 +35,7 @@ public class DataController {
         return mylist;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4201")
     @GetMapping("/data/{sensorsId}")
     public List<Data> getDataWithId(@PathVariable Integer sensorsId) throws ParseException {
         ArrayList<Data> testdata = new ArrayList<Data>(getAllData());

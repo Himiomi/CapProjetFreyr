@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="test-chinook" uuid="8b3648f5-bc9a-4cd8-a619-cd6123ff05c9">
+    <data-source source="LOCAL" name="chinook" uuid="d52ed271-6f53-4e4b-871b-b163b319d964">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\fitza\Downloads\BackEnd_CapProjet-main\CapProjetFreyr\CapProjetFreyr\src\test\resources\sqlite\db\test-chinook.db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="chinook" uuid="f62027a3-8531-4838-97a3-f8364446915c">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\fitza\Downloads\BackEnd_CapProjet-main\CapProjetFreyr\CapProjetFreyr\src\main\resources\sqlite\db\chinook.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\fitza\IdeaProjects\CapProjetFreyr2\src\main\resources\sqlite\db\chinook.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
