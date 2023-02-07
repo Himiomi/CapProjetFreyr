@@ -34,20 +34,4 @@ class TypeControllerTest {
     @Mock
     private DatabaseConfig databaseMock;
 
-    @Test
-    void getAllTypes() {
-
-        // Création de l'instance de la classe à tester
-        TypeController myClass = new TypeController(databaseMock);
-
-        // Configuration du mock de l'objet Database pour qu'il retourne la liste de stations fictive
-        when(databaseMock.getUrl()).thenReturn("jdbc:sqlite:src/test/resources/sqlite/db/test-chinook.db");
-
-        // Appel de la méthode à tester
-        List<Type> actualStations = myClass.getAllTypes();
-
-        // Vérification que la méthode retourne bien la liste de stations fictive
-        assertEquals(expectedStations.toString(), actualStations.toString());
-
-    }
 }

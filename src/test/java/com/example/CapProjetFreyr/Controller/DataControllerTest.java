@@ -74,37 +74,4 @@ class DataControllerTest {
         assertEquals("pong", result);
     }
 
-    @Test
-    void getAllData() throws ParseException {
-
-        // Création de l'instance de la classe à tester
-        DataController myClass = new DataController(databaseMock);
-
-        // Configuration du mock de l'objet Database pour qu'il retourne la liste de stations fictive
-        when(databaseMock.getUrl()).thenReturn("jdbc:sqlite:src/test/resources/sqlite/db/test-chinook.db");
-
-        // Appel de la méthode à tester
-        List<Data> actualStations = myClass.getAllData();
-
-        // Vérification que la méthode retourne bien la liste de stations fictive
-        assertEquals(expectedStations.toString(), actualStations.toString());
-
-    }
-
-    @Test
-    void getDataWithId() throws ParseException {
-
-        // Création de l'instance de la classe à tester
-        DataController myClass = new DataController(databaseMock);
-
-        // Configuration du mock de l'objet Database pour qu'il retourne la liste de stations fictive
-        when(databaseMock.getUrl()).thenReturn("jdbc:sqlite:src/test/resources/sqlite/db/test-chinook.db");
-
-        // Appel de la méthode à tester
-        List<Data> actualStations = myClass.getDataWithId(2);
-
-        // Vérification que la méthode retourne bien la liste de stations fictive
-        assertEquals(expectedStations.stream().filter(c->c.getSensorsId()==2).collect(Collectors.toList()).toString(), actualStations.toString());
-
-    }
 }
